@@ -21,3 +21,5 @@ requests>=2.32.0
 
 # Optional Data Handling
 pandas>=2.3.0
+
+opencv-python>=4.12.0
