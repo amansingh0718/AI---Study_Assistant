@@ -13,6 +13,9 @@ from embeddings.embedder import TextEmbedder
 
 from vectorstore.faiss_store import FAISSStore
 
+from storage.document_store import DocumentStore
+
+
 
 class IndexingPipeline:
     """
@@ -36,6 +39,8 @@ class IndexingPipeline:
         self.embedder = TextEmbedder()
 
         self.store = FAISSStore()
+
+        self.document_store = DocumentStore("storage")
 
     def index_document(
         self,
@@ -76,6 +81,8 @@ class IndexingPipeline:
         clean_text = self.cleaner.clean(
             text
         )
+
+        self.document_store.save(clean_text)
 
         chunks = self.chunker.chunk_text(
             clean_text
