@@ -1,5 +1,5 @@
 from embeddings.embedder import TextEmbedder
-from vectorstore.faiss_store import FAISSStore
+from vector_store.faiss_store import FAISSStore
 
 
 class Retriever:
@@ -11,8 +11,6 @@ class Retriever:
         self.embedder = TextEmbedder()
 
         self.store = FAISSStore()
-
-        self.store.load()
 
     def retrieve(
         self,
@@ -40,6 +38,9 @@ class Retriever:
 
         if len(query.strip()) == 0:
             return []
+
+        # Load latest FAISS index
+        self.store.load()
 
         query_embedding = self.embedder.embed(
             [query]

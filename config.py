@@ -16,6 +16,32 @@ UPLOAD_DIR = DATA_DIR / "uploads"
 # FAISS Storage Folder
 FAISS_DIR = DATA_DIR / "faiss_index"
 
+
+
+
+
+# ==========================================================
+# CREATE REQUIRED DIRECTORIES
+# ==========================================================
+
+# Automatically create folders if they don't exist
+DATA_DIR.mkdir(
+    parents=True,
+    exist_ok=True
+)
+
+UPLOAD_DIR.mkdir(
+    parents=True,
+    exist_ok=True
+)
+
+FAISS_DIR.mkdir(
+    parents=True,
+    exist_ok=True
+)
+
+
+
 # ==========================================================
 # SUPPORTED FILE TYPES
 # ==========================================================
@@ -48,7 +74,7 @@ EMBEDDING_MODEL = "all-MiniLM-L6-v2"
 
 FAISS_INDEX_FILE = FAISS_DIR / "index.faiss"
 
-FAISS_METADATA_FILE = FAISS_DIR / "metadata.pkl"
+FAISS_CHUNKS_FILE = FAISS_DIR / "chunks.pkl"
 
 # ==========================================================
 # OLLAMA SETTINGS
@@ -56,7 +82,7 @@ FAISS_METADATA_FILE = FAISS_DIR / "metadata.pkl"
 
 OLLAMA_BASE_URL = "http://localhost:11434"
 
-OLLAMA_MODEL = "llama3.2:3b"
+OLLAMA_MODEL = "gemma3:1b"
 
 # ==========================================================
 # RETRIEVAL SETTINGS

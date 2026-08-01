@@ -1,10 +1,13 @@
-from pathlib import Path
 import pickle
 
 import faiss
 import numpy as np
 
-from config import FAISS_DIR
+from config import (
+    FAISS_DIR,
+    FAISS_INDEX_FILE,
+    FAISS_CHUNKS_FILE,
+)
 
 
 class FAISSStore:
@@ -34,6 +37,13 @@ class FAISSStore:
             embeddings.astype(np.float32)
         )
 
+    def add_chunks(self, chunks):
+        """
+        Store original text chunks.
+        """
+
+        self.chunks = chunks
+
     def save(self):
         """
         Save FAISS index and chunks.
@@ -44,19 +54,25 @@ class FAISSStore:
                 "No FAISS index to save."
             )
 
+        # Create directory if it doesn't exist
+        FAISS_DIR.mkdir(
+            parents=True,
+            exist_ok=True
+        )
+
         faiss.write_index(
             self.index,
-            str(FAISS_DIR / "index.faiss")
+            str(FAISS_INDEX_FILE)
         )
 
         with open(
-            FAISS_DIR / "chunks.pkl",
-            "wb",
+            FAISS_CHUNKS_FILE,
+            "wb"
         ) as file:
 
             pickle.dump(
                 self.chunks,
-                file,
+                file
             )
 
     def load(self):
@@ -64,23 +80,27 @@ class FAISSStore:
         Load FAISS index and chunks.
         """
 
+        if not FAISS_INDEX_FILE.exists():
+            raise FileNotFoundError(
+                "FAISS index not found.\n"
+                "Please upload and index a document first."
+            )
+
+        if not FAISS_CHUNKS_FILE.exists():
+            raise FileNotFoundError(
+                "Chunks file not found."
+            )
+
         self.index = faiss.read_index(
-            str(FAISS_DIR / "index.faiss")
+            str(FAISS_INDEX_FILE)
         )
 
         with open(
-            FAISS_DIR / "chunks.pkl",
-            "rb",
+            FAISS_CHUNKS_FILE,
+            "rb"
         ) as file:
 
             self.chunks = pickle.load(file)
-
-    def add_chunks(self, chunks):
-        """
-        Store original text chunks.
-        """
-
-        self.chunks = chunks
 
     def search(
         self,
@@ -88,17 +108,17 @@ class FAISSStore:
         top_k=3,
     ):
         """
-        Search similar chunks.
+        Search most similar chunks.
         """
 
         if self.index is None:
             raise ValueError(
-                "FAISS index not loaded."
+                "FAISS index is not loaded."
             )
 
         distances, indices = self.index.search(
             query_embedding.astype(np.float32),
-            top_k,
+            top_k
         )
 
         results = []

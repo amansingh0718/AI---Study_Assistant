@@ -1,20 +1,17 @@
 from pathlib import Path
 
-from loaders.file_loader import FileLoader
-
 from parsers.pdf_parser import PDFParser
 from parsers.image_parser import ImageParser
-from parsers.txt_parser import TextParser
+from parsers.text_parser import TextParser
 
 from processing.cleaner import TextCleaner
 from processing.chunker import TextChunker
 
 from embeddings.embedder import TextEmbedder
 
-from vectorstore.faiss_store import FAISSStore
+from vector_store.faiss_store import FAISSStore
 
 from storage.document_store import DocumentStore
-
 
 
 class IndexingPipeline:
@@ -23,8 +20,6 @@ class IndexingPipeline:
     """
 
     def __init__(self):
-
-        self.loader = FileLoader()
 
         self.pdf_parser = PDFParser()
 
@@ -50,7 +45,13 @@ class IndexingPipeline:
 
         suffix = path.suffix.lower()
 
+        print("\n" + "=" * 60)
+        print("STEP 1 : Detect File Type")
+        print("=" * 60)
+
         if suffix == ".pdf":
+
+            print("PDF detected")
 
             text = self.pdf_parser.extract_text(
                 file_path
@@ -62,11 +63,15 @@ class IndexingPipeline:
             ".jpeg",
         ]:
 
+            print("Image detected")
+
             text = self.image_parser.extract_text(
                 file_path
             )
 
         elif suffix == ".txt":
+
+            print("Text file detected")
 
             text = self.text_parser.extract_text(
                 file_path
@@ -78,9 +83,19 @@ class IndexingPipeline:
                 "Unsupported file type."
             )
 
-        clean_text = self.cleaner.clean(
-            text
-        )
+        print("\nSTEP 2 : Extracted Text")
+        print("-" * 40)
+        print("Length :", len(text))
+        print("Preview:")
+        print(repr(text[:300]))
+
+        clean_text = self.cleaner.clean(text)
+
+        print("\nSTEP 3 : Cleaned Text")
+        print("-" * 40)
+        print("Length :", len(clean_text))
+        print("Preview:")
+        print(repr(clean_text[:300]))
 
         self.document_store.save(clean_text)
 
@@ -88,18 +103,45 @@ class IndexingPipeline:
             clean_text
         )
 
+        print("\nSTEP 4 : Chunking")
+        print("-" * 40)
+        print("Total Chunks :", len(chunks))
+
+        if len(chunks) > 0:
+            print("\nFirst Chunk:")
+            print(chunks[0][:300])
+
         embeddings = self.embedder.embed(
             chunks
         )
+
+        print("\nSTEP 5 : Embeddings")
+        print("-" * 40)
+        print("Type :", type(embeddings))
+
+        try:
+            print("Shape :", embeddings.shape)
+        except Exception as e:
+            print("Shape Error :", e)
 
         self.store.add_chunks(
             chunks
         )
 
+        print("\nSTEP 6 : Creating FAISS Index")
+
         self.store.create_index(
             embeddings
         )
 
+        print("FAISS Index Created Successfully")
+
         self.store.save()
+
+        print("FAISS Index Saved Successfully")
+
+        print("=" * 60)
+        print("INDEXING COMPLETED")
+        print("=" * 60)
 
         return len(chunks)
