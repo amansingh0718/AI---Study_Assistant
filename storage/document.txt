@@ -1,0 +1,178 @@
+Unit -1 (Cell) 
+A cell is the basic structural and functional unit of a living organism. According to cell 
+theory postulates, a cell is the basic building block of life, which makes anything alive 
+and is self-suƯicient to carry out all the fundamental functions of an organism. 
+What are Cell Organelles? 
+The cellular components are called cell organelles. These cell organelles include both 
+membrane and non-membrane bound organelles, present within the cells and are 
+distinct in their structures and functions. They coordinate and function eƯiciently for the 
+normal functioning of the cell. A few of them function by providing shape and support, 
+whereas some are involved in the locomotion and reproduction of a cell. There are 
+various organelles present within the cell and are classiﬁed into three categories 
+based on the presence or absence of membrane. 
+Organelles without membrane: The Cell wall, Ribosomes, and Cytoskeleton are non-
+membrane-bound cell organelles. They are present both in the prokaryotic cell and the 
+eukaryotic cell. 
+Single membrane-bound organelles: Vacuole, Lysosome, Golgi Apparatus, 
+Endoplasmic Reticulum are single membrane-bound organelles present only in a 
+eukaryotic cell. 
+Double membrane-bound organelles: Nucleus, mitochondria and chloroplast are 
+double membrane-bound organelles present only in a eukaryotic cell. 
+ cell organelles 
+ 
+List of Cell Organelles and their Functions 
+
+Plasma Membrane 
+The plasma membrane is also termed as a Cell Membrane or Cytoplasmic Membrane. 
+It is a selectively permeable membrane of the cells, which is composed of a lipid bilayer 
+and proteins. 
+The plasma membrane is present both in plant and animal cells. It functions as the 
+selectively permeable membrane, by permitting the entry of selective materials in and 
+out of the cell according to the requirement. In an animal cell, the cell membrane 
+functions by providing shape and protects the inner contents of the cell. Based on 
+the structure of the plasma membrane, it is regarded as the ﬂuid mosaic model. 
+According to the ﬂuid mosaic model, the plasma membranes are subcellular 
+structures, made of a lipid bilayer in which the protein molecules are embedded. 
+Also refer to the DiƯerence Between Cell Membrane and Plasma Membrane 
+Cytoplasm 
+The cytoplasm is present both in plant and animal cells. They are jelly-like 
+substances, found between the cell membrane and nucleus. They are mainly 
+composed of water, organic and inorganic compounds. The cytoplasm is one of the 
+essential components of the cell, where all the cell organelles are embedded. These 
+cell organelles contain enzymes, mainly responsible for controlling all metabolic 
+activity taking place within the cell and are the site for most of the chemical reactions 
+within a cell. 
+Nucleus 
+ 
+The nucleus is a double-membraned organelle found in all eukaryotic cells. It is the 
+largest organelle, which functions as the control centre of the cellular activities and is 
+the storehouse of the cell’s DNA. By structure, the nucleus is dark, round, surrounded 
+by a nuclear membrane. It is a porous membrane (like cell membrane) and forms a wall 
+
+between cytoplasm and nucleus. Within the nucleus, there are tiny spherical bodies 
+called nucleolus. It also carries an essential structure called chromosomes. 
+Chromosomes are thin and thread-like structures which carry another important 
+structure called a gene. Genes are a hereditary unit in organisms i.e., it helps in the 
+inheritance of traits from one generation (parents) to another (oƯspring). Hence, the 
+nucleus controls the characters and functions of cells in our body. The primary function 
+of the nucleus is to monitor cellular activities including metabolism and growth by 
+making use of DNA’s genetic information. Nucleoli in the nucleus are responsible for the 
+synthesis of protein and RNA. 
+Endoplasmic Reticulum 
+The Endoplasmic Reticulum is a network of membranous canals ﬁlled with ﬂuid. They 
+are the transport system of the cell, involved in transporting materials throughout the 
+cell. 
+There are two diƯerent types of Endoplasmic Reticulum: 
+1. Rough Endoplasmic Reticulum – They are composed of cisternae, tubules, and 
+vesicles, which are found throughout the cell and are involved in protein 
+manufacture. 
+2. Smooth Endoplasmic Reticulum – They are the storage organelle, associated 
+with the production of lipids, steroids, and also responsible for detoxifying the 
+cell. 
+Also, read about Endoplasmic Reticulum 
+Mitochondria 
+ 
+Mitochondria are called the powerhouses of the cell as they produce energy-rich 
+molecules for the cell. The mitochondrial genome is inherited maternally in several 
+organisms. It is a double membrane-bound, sausage-shaped organelle, found in almost 
+all eukaryotic cells. 
+
+The double membranes divide its lumen into two distinct aqueous compartments. The 
+inner compartment is called a ‘matrix’ which is folded into cristae whereas the outer 
+membrane forms a continuous boundary with the cytoplasm. They usually vary in their 
+size and are found either round or oval in shape. Mitochondria are the sites of aerobic 
+respiration in the cell, produces energy in the form of ATP and helps in the 
+transformation of the molecules. 
+For instance, glucose is converted into adenosine triphosphate – ATP. Mitochondria 
+have their own circular DNA, RNA molecules, ribosomes (the 70s), and a few other 
+molecules that help in protein synthesis. 
+Also read about Mitochondria 
+Plastids 
+Plastids are large, membrane-bound organelles which contain pigments. Based on the 
+type of pigments, plastids are of three types: 
+ 
+ 
+Chloroplasts – Chloroplasts are double membrane-bound organelles, 
+which usually vary in their shape – from a disc shape to spherical, discoid, oval 
+and ribbon. They are present in mesophyll cells of leaves, which store 
+chloroplasts and other carotenoid pigments. These pigments are responsible for 
+trapping light energy for photosynthesis. The inner membrane encloses a space 
+called the stroma. Flattened disc-like chlorophyll-containing structures known 
+as thylakoids are arranged in a stacked manner like a pile of coins. Each pile is 
+called a granum (plural: grana) and the thylakoids of diƯerent grana are 
+connected by ﬂat membranous tubules known as stromal lamella. Just like the 
+mitochondrial matrix, the stroma of chloroplast also contains a double-stranded 
+circular DNA, 70S ribosomes, and enzymes which are required for the synthesis 
+of carbohydrates and proteins. 
+
+ 
+Chromoplasts – The chromoplasts include fat-soluble, carotenoid pigments like 
+xanthophylls, carotene, etc. which provide the plants with their characteristic 
+color – yellow, orange, red, etc. 
+ 
+Leucoplasts – Leucoplasts are colorless plastids which store nutrients. 
+Amyloplasts store carbohydrates (like starch in potatoes), aleuroplasts store 
+proteins, and elaioplasts store oils and fats. 
+Ribosomes 
+ 
+Ribosomes are non membrane-bound and important cytoplasmic organelles found in 
+close association with the endoplasmic reticulum. Ribosomes are found in the form of 
+tiny particles in a large number of cells and are mainly composed of 2/3rd of RNA and 
+1/3rd of protein. They are named as the 70s (found in prokaryotes) or 80s (found in 
+eukaryotes) The letter S refers to the density and the size, known as Svedberg’s Unit. 
+Both 70S and 80S ribosomes are composed of two subunits. Ribosomes are either 
+encompassed within the endoplasmic reticulum or are freely traced in the cell’s 
+cytoplasm. Ribosomal RNA and Ribosomal proteins are the two components that 
+together constitute ribosomes. The primary function of the ribosomes includes protein 
+synthesis in all living cells that ensure the survival of the cell. 
+Golgi Apparatus 
+Golgi Apparatus is also termed as Golgi Complex. It is a membrane-bound organelle, 
+which is mainly composed of a series of ﬂattened, stacked pouches called cisternae. 
+This cell organelle is primarily responsible for transporting, modifying, and packaging 
+proteins and lipids to targeted destinations. Golgi Apparatus is found within the 
+cytoplasm of a cell and is present in both plant and animal cells. 
+ 
+
+Microbodies 
+ 
+Microbodies are membrane-bound, minute, vesicular organelles, found in both plant 
+and animal cells. They contain various enzymes and proteins and can be visualized 
+only under the electron microscope. 
+Also read about Microbodies 
+Cytoskeleton 
+It is a continuous network of ﬁlamentous proteinaceous structures that run throughout 
+the cytoplasm, from the nucleus to the plasma membrane. It is found in all living cells, 
+notably in the eukaryotes. The cytoskeleton matrix is composed of diƯerent types of 
+proteins that can divide rapidly or disassemble depending on the requirement of the 
+cells. The primary functions include providing the shape and mechanical resistance to 
+the cell against deformation, the contractile nature of the ﬁlaments helps in motility 
+during cytokinesis. 
+Cilia and Flagella 
+ 
+Cilia are hair-like projections, small structures, present outside the cell wall and work 
+like oars to either move the cell or the extracellular ﬂuid. Flagella are slightly bigger and 
+are responsible for the cell movements. The eukaryotic ﬂagellum structurally diƯers 
+from its prokaryotic counterpart. The core of the cilium and ﬂagellum is called an 
+axoneme, which contains nine pairs of gradually arranged peripheral microtubules and 
+a set of central microtubules running parallel to the axis. The central tubules are 
+interconnected by a bridge and are embedded by a central sheath. One of the 
+peripheral microtubular pairs is also interconnected to the central sheath by a radial 
+
+spoke. Hence there are a total of 9 radial spokes. The cilia and ﬂagella emerge from 
+centriole-like structures called basal bodies. 
+Centrosome and Centrioles 
+ 
+The centrosome organelle is made up of two mutually perpendicular structures known 
+as centrioles. Each centriole is composed of 9 equally spaced peripheral ﬁbrils of 
+tubulin protein, and the ﬁbril is a set of interlinked triplets. The core part of the centriole 
+is known as a hub and is proteinaceous. The hub connects the peripheral ﬁbrils via 
+radial spoke, which is made up of proteins. The centrioles from the basal bodies of the 
+cilia and ﬂagella give rise to spindle ﬁbres during cell division. 
+Vacuoles 
+Vacuoles are mostly deﬁned as storage bubbles of irregular shapes which are found in 
+cells. They are ﬂuid-ﬁlled organelles enclosed by a membrane. The vacuole stores the 
+food or a variety of nutrients that a cell might need to survive. In addition to this, it also 
+stores waste products. The waste products are eventually thrown out by vacuoles. Thus, 
+the rest of the cell is protected from contamination. The animal and plant cells have 
+diƯerent size and number of vacuoles. Compared to the animals, plant cells have larger 
+vacuoles.

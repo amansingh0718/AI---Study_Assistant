@@ -1,0 +1,27 @@
+streamlit>=1.48.0
+
+# Numerical Operations
+numpy>=2.3.0
+
+# PDF Parsing
+PyMuPDF>=1.26.0
+
+# Image Processing
+Pillow>=11.3.0
+pytesseract>=0.3.13
+
+# Embedding Model
+sentence-transformers>=5.1.0
+
+# Vector Database
+faiss-cpu>=1.12.0
+
+# Local LLM Communication
+requests>=2.32.0
+
+# Optional Data Handling
+pandas>=2.3.0
+
+opencv-python>=4.12.0
+
+ollama
