@@ -3,10 +3,12 @@ import tempfile
 
 import streamlit as st
 
+from utils.css_loader import load_css
+
 from config import FAISS_INDEX_FILE
 from rag.indexing_pipeline import IndexingPipeline
 from rag.rag_pipeline import RAGPipeline
-from ui.styles import load_css
+
 
 
 # ----------------------------------------------------
@@ -14,19 +16,17 @@ from ui.styles import load_css
 # ----------------------------------------------------
 
 st.set_page_config(
-    page_title="Study Buddy - Learning RAG",
+    page_title="Study Buddy AI",
     page_icon="📚",
     layout="wide",
+    initial_sidebar_state="expanded",
 )
 
 # ----------------------------------------------------
 # LOAD CSS
 # ----------------------------------------------------
 
-st.markdown(
-    load_css(),
-    unsafe_allow_html=True,
-)
+load_css()
 
 # ----------------------------------------------------
 # HEADER
@@ -41,8 +41,9 @@ st.markdown(
     </div>
 
     <div class="header-subtitle">
-    Learn Retrieval-Augmented Generation (RAG)
-    using FAISS + Sentence Transformers + Ollama
+    AI-powered Learning Assistant
+
+    Ask Questions • Generate Summaries • Create Quiz • Flashcards
     </div>
 
     </div>
@@ -87,7 +88,7 @@ with left_col:
 
     if uploaded_file:
 
-        st.success("File uploaded successfully.")
+        st.success("✅ File uploaded successfully.")
 
         with tempfile.NamedTemporaryFile(
             delete=False,
@@ -99,7 +100,7 @@ with left_col:
             temp_path = temp_file.name
 
         if st.button(
-            "📚 Create Index",
+            "⚡ Build Knowledge Base",
             use_container_width=True,
         ):
 
@@ -118,12 +119,7 @@ with left_col:
                     st.session_state.document_indexed = True
 
                     st.success(
-                        f"""
-                        Index Created Successfully!
-
-                        Total Chunks:
-                        {total_chunks}
-                        """
+                        f"✅ Index Created Successfully!\n\nChunks Created : {total_chunks}"
                     )
 
                 except Exception as e:
@@ -136,11 +132,11 @@ with left_col:
 
     if FAISS_INDEX_FILE.exists():
 
-        st.success("FAISS Index Ready")
+        st.success("🟢 Knowledge Base Ready")
 
     else:
 
-        st.warning("No Index Found")
+        st.warning("🟡 Please create an index first")
 
 # ====================================================
 # MAIN PANEL
@@ -176,7 +172,7 @@ with right_col:
         )
 
     if st.button(
-        "🚀 Generate",
+        "🤖 Ask AI",
         use_container_width=True,
     ):
 
@@ -193,7 +189,7 @@ with right_col:
                 pipeline = RAGPipeline()
 
                 with st.spinner(
-                    "Thinking..."
+                    "AI is thinking..."
                 ):
 
                     response = pipeline.run(
@@ -234,6 +230,15 @@ with right_col:
 
 st.markdown("---")
 
-st.caption(
-    "Built for Learning ❤️ | FAISS • Sentence Transformers • Ollama • Streamlit"
+st.markdown(
+    """
+<div class="footer">
+
+Built with ❤️ using
+
+FAISS • Sentence Transformers • Ollama • Streamlit
+
+</div>
+""",
+unsafe_allow_html=True
 )
