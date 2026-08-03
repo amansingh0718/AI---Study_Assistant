@@ -92,10 +92,23 @@ class RAGPipeline:
                     )
                 )
 
+            elif mode == "study_notes":
+
+                prompt = PromptTemplates.study_notes(
+                    context
+                )
+
             else:
 
                 raise ValueError(
                     f"Unsupported mode: {mode}"
                 )
+
+
+            print("=" * 100)
+            print("FINAL PROMPT SENT TO LLM")
+            print("=" * 100)
+            print(prompt)
+            print("=" * 100)
 
         return self.llm.generate(prompt)

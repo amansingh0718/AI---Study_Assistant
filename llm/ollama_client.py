@@ -44,6 +44,10 @@ class OllamaClient:
             timeout=300,
         )
 
+        print("=" * 100)
+        print(response)
+        print("=" * 100)
+
         response.raise_for_status()
 
         data = response.json()

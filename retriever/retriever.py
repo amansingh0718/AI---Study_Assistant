@@ -9,7 +9,6 @@ class Retriever:
 
     def __init__(self):
         self.embedder = TextEmbedder()
-
         self.store = FAISSStore()
 
     def retrieve(
@@ -17,38 +16,26 @@ class Retriever:
         query,
         top_k=3,
     ):
-        """
-        Retrieve relevant chunks.
 
-        Parameters
-        ----------
-        query : str
-
-        top_k : int
-
-        Returns
-        -------
-        list[str]
-        """
-
-        if not isinstance(query, str):
-            raise TypeError(
-                "Query must be a string."
-            )
-
-        if len(query.strip()) == 0:
-            return []
-
-        # Load latest FAISS index
         self.store.load()
 
-        query_embedding = self.embedder.embed(
-            [query]
-        )
+        query_embedding = self.embedder.embed([query])
+
+        print("=" * 80)
+        print("QUESTION :", query)
 
         chunks = self.store.search(
             query_embedding,
             top_k=top_k,
         )
+
+        print("\nRetrieved Chunks:\n")
+
+        for i, chunk in enumerate(chunks):
+
+            print(f"Chunk {i+1}")
+            print("-" * 60)
+            print(chunk[:500])
+            print()
 
         return chunks

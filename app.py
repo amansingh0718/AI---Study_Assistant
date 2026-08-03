@@ -160,6 +160,7 @@ with right_col:
             "questions",
             "quiz",
             "flashcards",
+            "study_notes",
         ],
     )
 
@@ -201,23 +202,19 @@ with right_col:
                     )
 
                 st.markdown(
-                    """
-                    <div class="card-title">
-                    📄 Response
-                    </div>
-                    """,
-                    unsafe_allow_html=True,
-                )
+                """
+                <div class="card-title">
+                📄 Response
+                </div>
+                """,
+                unsafe_allow_html=True,
+            )
+
+            with st.container():
 
                 st.markdown(
-                    f"""
-                    <div class="result-card">
-
-                    {response}
-
-                    </div>
-                    """,
-                    unsafe_allow_html=True,
+                    response,
+                    unsafe_allow_html=False,
                 )
 
         except Exception as e:
@@ -234,7 +231,7 @@ st.markdown(
     """
 <div class="footer">
 
-Built with ❤️ using
+Built using
 
 FAISS • Sentence Transformers • Ollama • Streamlit
 

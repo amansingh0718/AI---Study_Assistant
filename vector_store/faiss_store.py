@@ -103,6 +103,7 @@ class FAISSStore:
         ) as file:
 
             self.chunks = pickle.load(file)
+            print(len(self.chunks))
 
     def search(
         self,
@@ -127,6 +128,8 @@ class FAISSStore:
             top_k,
         )
 
+        print("\nIndices :", indices)
+        print("\nSimilarity Scores :", scores)
         results = []
 
         for idx in indices[0]:
